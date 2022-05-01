@@ -9,7 +9,7 @@ class LoginController (
         ): ILoginController{
 
 
-    override fun OnLogin(email: String?, password: String?) {
+    override fun onLogin(email: String?, password: String?) {
         val user = User(email, password)
         val loginCode = user.isValid()
 

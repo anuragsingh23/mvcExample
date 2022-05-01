@@ -3,7 +3,6 @@ package com.example.mvcexample
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import com.example.mvcexample.R
 import com.example.mvcexample.controller.ILoginController
 import com.example.mvcexample.controller.LoginController
 import com.example.mvcexample.databinding.ActivityMainBinding
@@ -23,7 +22,7 @@ class MainActivity : AppCompatActivity() , ILoginView {
          loginPresenter = LoginController(this)
 
         mBinding.mButtonLogin.setOnClickListener {
-            (loginPresenter as LoginController).OnLogin(mBinding.edtUserName.text.toString(),
+            (loginPresenter as LoginController).onLogin(mBinding.edtUserName.text.toString(),
             mBinding.edtPassword.text.toString().trim())
         }
     }
